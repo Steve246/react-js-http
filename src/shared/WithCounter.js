@@ -1,11 +1,32 @@
-import React, { Component } from "react";
+import { Component } from "react";
 
 const UpdateComponent = (OriginalComponent) => {
   class NewComponent extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        count: 0,
+      };
+    }
+
+    incrementCount = () => {
+      this.setState((prevState) => {
+        return { count: prevState.count + 1 };
+      });
+    };
+
     render() {
-      return <OriginalComponent name="this is HOC" />;
+      return (
+        <div>
+          <OriginalComponent
+            count={this.state.count}
+            IncrementCount={this.incrementCount}
+          />
+        </div>
+      );
     }
   }
+
   return NewComponent;
 };
 

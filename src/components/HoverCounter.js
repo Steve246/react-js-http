@@ -18,7 +18,7 @@ class HoverCounter extends Component {
     const { count } = this.state;
     return (
       <div>
-        <button onClick={this.incrementCount}> Hover {count} X </button>
+        <button onMouseOver={this.incrementCount}> Hover {count} X </button>
       </div>
     );
   }

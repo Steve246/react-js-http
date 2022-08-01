@@ -1,4 +1,4 @@
-import WithText from "./WithText";
+import WithText from "../shared/WithText";
 
 const HelloComponent = () => {
   return <span> Hello </span>;

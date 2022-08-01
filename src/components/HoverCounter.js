@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import UpdateComponent from "./WithCounter";
+import UpdateComponent from "../shared/WithCounter";
 class HoverCounter extends Component {
   constructor(props) {
     super(props);

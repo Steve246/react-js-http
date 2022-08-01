@@ -3,13 +3,20 @@ import "./App.css";
 import ClickCounter from "./components/ClickCounter";
 import HoverCounter from "./components/HoverCounter";
 import HelloComponent from "./components/HelloComponent";
+import ProductCard from "./features/product/ProductCard";
+import data from "./products.json";
+import ProductList from "./features/product/ProductList";
+import { Component } from "react";
 
 function App() {
   return (
     <div>
-      <ClickCounter />
+      {/* <ClickCounter />
       <HoverCounter />
-      <HelloComponent />
+      <HelloComponent /> */}
+
+      {/* <ProductCard data={data.products} /> */}
+      <ProductList data={data.products} />
     </div>
   );
 }

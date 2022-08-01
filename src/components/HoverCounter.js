@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import UpdateComponent from "./WithCounter";
 class HoverCounter extends Component {
   constructor(props) {
     super(props);
@@ -18,10 +18,13 @@ class HoverCounter extends Component {
     const { count } = this.state;
     return (
       <div>
-        <button onClick={this.incrementCount}> Hover {count} X </button>
+        <button onMouseOver={this.incrementCount}>
+          {" "}
+          {this.props.name} Hover {count} X{" "}
+        </button>
       </div>
     );
   }
 }
 
-export default HoverCounter;
+export default UpdateComponent(HoverCounter);
